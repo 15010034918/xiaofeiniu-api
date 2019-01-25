@@ -1,0 +1,26 @@
+{
+  "name": "xiaofeiniu-api",
+  "version": "1.0.0",
+  "description": "小肥牛扫码点餐数据API子系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/15010034918/xiaofeiniu-api.git"
+  },
+  "keywords": [
+    "小肥牛",
+    "xiaofeiniu",
+    "扫码",
+    "点餐"
+  ],
+  "author": "Qi ye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/15010034918/xiaofeiniu-api/issues"
+  },
+  "homepage": "https://github.com/15010034918/xiaofeiniu-api#readme"
+}
