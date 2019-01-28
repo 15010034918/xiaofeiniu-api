@@ -9,9 +9,9 @@ CREATE TABLE xfn_admin(
   aname VARCHAR(32) UNIQUE,
   apwd  VARCHAR(64)
 );
-INSERT INTO xfn_admin VALUES(NULL,'admin',PASSWORD('123456'));
-INSERT INTO xfn_admin VALUES(NULL,'boss',PASSWORD('999999'));
-INSERT INTO xfn_admin VALUES(NULL,'tom',PASSWORD('123456'));
+INSERT INTO xfn_admin VALUES(NULL,'admin',PASSWORD(123456));
+INSERT INTO xfn_admin VALUES(NULL,'boss',PASSWORD(999999));
+INSERT INTO xfn_admin VALUES(NULL,'tom',PASSWORD(123456));
 
 /* 项目全局设置 */
 CREATE TABLE xfn_settings(

@@ -9,6 +9,7 @@ const cors=require('cors')
 const bodyParser=require('body-parser')
 const express =require('express');
 const categoryRouter=require('./routes/admin/category');
+const adminRouter=require('./routes/admin/admin');
 
 var app=express();
 
@@ -25,3 +26,4 @@ app.listen(PORT,()=>{
 
 // 挂载路由器
 app.use('/admin/category',categoryRouter);
+app.use('/admin/admin',adminRouter);
