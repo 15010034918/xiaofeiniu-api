@@ -54,7 +54,7 @@ INSERT INTO xfn_table VALUES(NULL,'全家福','10-12人桌','1');
 
 /* 菜品名称 */
 CREATE TABLE xfn_category(
-  tid INT PRIMARY KEY AUTO_INCREMENT,
+  cid INT PRIMARY KEY AUTO_INCREMENT,
   cname VARCHAR(32)
 );
 INSERT INTO xfn_category VALUES(NULL,'肉类');
@@ -72,7 +72,7 @@ CREATE TABLE xfn_dish(
   price DECIMAL(6,2),
   detail VARCHAR(128),
   categoryId INT, 
-  Foreign key(categoryId) REFERENCES  xfn_category(tid)
+  Foreign key(categoryId) REFERENCES  xfn_category(cid)
 );
 INSERT INTO xfn_dish VALUES(10000,'草鱼片','CE7I9470.jpg',35,'选鲜活草鱼，切出鱼片冷鲜保存。锅开后再煮1分钟左右即可食用。',1);
 INSERT INTO xfn_dish VALUES(NULL,'脆皮肠','CE7I9017.jpg',25,'锅开后再煮3分钟左右即可食用。',2);
