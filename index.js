@@ -6,16 +6,18 @@ console.log(new Date().toLocaleString());
 
 const PORT =8090;
 const cors=require('cors')
+const bodyParser=require('body-parser')
 const express =require('express');
 const categoryRouter=require('./routes/admin/category');
 
 var app=express();
 
 /* 跨域处理 */
-app.use(cors({
-  origin: ["http://127.0.0.1:5500","http://127.0.0.1:8090"]
-}))
-
+app.use(cors({}))
+// app.use(bodyParset.urlencoded({}))
+// 把app
+/* 把application/JSON格式的请求数据解析出来放入req.body属性 */
+app.use(bodyParser.json());
 /* 创建HTTP应用服务器 */
 app.listen(PORT,()=>{
   console.log('API服务器启动成功...:'+PORT);

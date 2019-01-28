@@ -32,6 +32,27 @@
         console.log(err);
       })
     }
+
+    bt3.onclick=function(){
+      // 向服务器发送JSON
+      var data1={cname:'甜品类'}
+      axios.post('http://127.0.0.1:8090/admin/category',data).then((result)=>{
+        console.log('添加新的类别成功')
+        console.log(result.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
+
+    bt4.onclick=function(){
+      var data2={cid: 20, cname:'水果类'}
+      axios.post('http://127.0.0.1:8090/admin/category',data).then((result)=>{
+        console.log('类别修改成功')
+        console.log(result.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
   </script>
 </body>
 </html>
