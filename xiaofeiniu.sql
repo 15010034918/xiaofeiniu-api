@@ -45,7 +45,7 @@ INSERT INTO xfn_table VALUES(NULL,'全家福','10-12人桌','1');
     contactTime BIGINT,
     dinnerTime BIGINT,
     tableId   INT,
-    Foreign key(tableId) REFERENCES xfn_table(tid),
+    Foreign key(tableId) REFERENCES xfn_table(tid)
   );
   INSERT INTO xfn_reservation VALUES(NULL,'丁丁','13501234567','1548404890420','1548410400000',1);
   INSERT INTO xfn_reservation VALUES(NULL,'当当','13501114567','1548409730420','1549410400000',2);

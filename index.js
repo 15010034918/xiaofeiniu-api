@@ -1,29 +1,24 @@
-/* 
+/*
 *小肥牛扫码点餐项目API子系统
 */
-console.log('准备启动API服务器...');
-console.log(new Date().toLocaleString());
+const PORT = 8090; 
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const categoryRouter = require('./routes/admin/category');
+const adminRouter = require('./routes/admin/admin');
 
-const PORT =8090;
-const cors=require('cors')
-const bodyParser=require('body-parser')
-const express =require('express');
-const categoryRouter=require('./routes/admin/category');
-const adminRouter=require('./routes/admin/admin');
+//创建HTTP应用服务器
+var app = express(); 
+app.listen(PORT, ()=>{
+  console.log('Server Listening: '+PORT);
+});
 
-var app=express();
+//使用中间件
+app.use(cors());
+//app.use(bodyParser.urlencoded({}))  //把application/x-www-form-urlencoded格式的请求主体数据解析出来放入req.body属性
+app.use(bodyParser.json()); //把application/json格式的请求主体数据解析出来放入req.body属性
 
-/* 跨域处理 */
-app.use(cors({}))
-// app.use(bodyParset.urlencoded({}))
-// 把app
-/* 把application/JSON格式的请求数据解析出来放入req.body属性 */
-app.use(bodyParser.json());
-/* 创建HTTP应用服务器 */
-app.listen(PORT,()=>{
-  console.log('API服务器启动成功...:'+PORT);
-})
-
-// 挂载路由器
-app.use('/admin/category',categoryRouter);
-app.use('/admin/admin',adminRouter);
+//挂载路由器
+app.use('/admin/category', categoryRouter);
+app.use('/admin', adminRouter);
