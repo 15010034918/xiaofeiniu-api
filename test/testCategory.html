@@ -26,7 +26,7 @@
       //PUT/DELETE请求之前浏览器会先提交一个
       //“预取请求”—— Preflight Request—— 
       //请求方法为OPTIONS，目的是询问服务器是否支持接下来的请求方法
-      axios.delete('http://127.0.0.1:8090/admin/category/1').then((result)=>{
+      axios.delete('http://127.0.0.1:8090/admin/category/20').then((result)=>{
         console.log('删除类别执行成功：')
         console.log(result.data);
       }).catch((err)=>{
