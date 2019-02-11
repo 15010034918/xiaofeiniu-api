@@ -8,7 +8,7 @@ var router = express.Router();
 module.exports = router;
 
 /*
-*API:  GET /admin/category     
+*API:  GET /admin/category
 *含义：客户端获取所有的菜品类别，按编号升序排列
 *返回值形如：
 *  [{cid: 1, cname: '..'}, {...}]
@@ -48,9 +48,9 @@ router.delete('/:cid', (req, res) => {
 
 
 /*
-*API:  POST /admin/category  
+*API:  POST /admin/category
 *请求参数：{cname:'xxx'}
-*含义：添加新的菜品类别   
+*含义：添加新的菜品类别
 *返回值形如：
 *  {code: 200, msg: '1 category added', cid: x }
 */
@@ -85,3 +85,4 @@ router.put('/', (req, res)=>{
     }
   })
 })
+
